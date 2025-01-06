@@ -258,6 +258,9 @@ public:
     static AMREX_EXPORT bool memEfficientSort;
     mutable AmrParticleLocator<DenseBins<Box> > m_particle_locator;
 
+		// virtual functions
+		virtual void WritePlotFile(const std::string &dir, const std::string &name) const = 0;
+
 protected:
 
     void BuildRedistributeMask (int lev, int nghost=1) const;

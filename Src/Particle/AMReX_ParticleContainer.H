@@ -818,7 +818,7 @@ public:
      * \param dir The base directory into which to write (i.e. "plt00000")
      * \param name The name of the sub-directory for this particle type (i.e. "Tracer")
      */
-    void WritePlotFile (const std::string& dir, const std::string& name) const;
+    void WritePlotFile (const std::string& dir, const std::string& name) const override;
 
     /**
      * \brief This version of WritePlotFile writes all components and assigns component names
