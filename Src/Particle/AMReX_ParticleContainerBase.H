@@ -259,7 +259,8 @@ public:
     mutable AmrParticleLocator<DenseBins<Box> > m_particle_locator;
 
 		// virtual functions
-		virtual void WritePlotFile(const std::string &dir, const std::string &name) const = 0;
+		virtual void WritePlotFile(const std::string &dir, const std::string &name) const {}
+		virtual void Checkpoint(const std::string &dir, const std::string &name, bool is_checkpoint) const {}
 
 protected:
 
