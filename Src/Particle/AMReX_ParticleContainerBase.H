@@ -259,6 +259,8 @@ public:
     mutable AmrParticleLocator<DenseBins<Box> > m_particle_locator;
 
 		// virtual functions
+		virtual void Redistribute(int lev) const {}
+		virtual void Redistribute(int lev_min, int lev_max, int nGrow) const {}
 		virtual void WritePlotFile(const std::string &dir, const std::string &name) const {}
 		virtual void Checkpoint(const std::string &dir, const std::string &name, bool is_checkpoint) const {}
 
