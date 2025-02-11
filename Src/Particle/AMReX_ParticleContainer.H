@@ -501,9 +501,7 @@ public:
     *              a particle can have moved since the last Redistribute() call. Knowing this number
     *              allows an optimized MPI communication pattern to be used.
     */
-    void Redistribute (int lev_min = 0, int lev_max = -1, int nGrow = 0, int local=0,
-                       bool remove_negative=true);
-
+    void Redistribute (int lev_min = 0, int lev_max = -1, int nGrow = 0, int local=0, bool remove_negative=true) override;
 
     /**
      * \brief Reorder particles on the tile given by lev and mfi using a the permutations array.
@@ -766,7 +764,7 @@ public:
      */
     void Checkpoint (const std::string& dir, const std::string& name, bool is_checkpoint,
                      const Vector<std::string>& real_comp_names = Vector<std::string>(),
-                     const Vector<std::string>& int_comp_names = Vector<std::string>()) const;
+                     const Vector<std::string>& int_comp_names = Vector<std::string>()) const override;
 
      /**
       * \brief Writes particle data to disk in the AMReX native format.
